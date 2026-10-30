@@ -1,6 +1,6 @@
 {
-  "name": "Dagroen — Slimme Maaltijdplanner",
-  "short_name": "Dagroen",
+  "name": "Kato Meal Planner",
+  "short_name": "Kato",
   "description": "Jouw persoonlijke weekmenu en boodschappenlijst.",
   "start_url": "./",
   "display": "standalone",

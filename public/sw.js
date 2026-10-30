@@ -1,4 +1,4 @@
-const CACHE = 'dagroen-v1';
+const CACHE = 'kato-meal-planner-v2';
 const APP_SHELL = ['./', './manifest.webmanifest', './icon.svg'];
 
 self.addEventListener('install', (event) => {

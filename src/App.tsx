@@ -227,7 +227,7 @@ function App() {
     <div className="app-shell">
       <aside className="sidebar">
         <a className="brand" href="#" onClick={(event) => { event.preventDefault(); setPage('today'); }}>
-          <span className="brand-mark"><Leaf size={21} /></span><span>dagroen<span className="brand-dot">.</span></span>
+          <span className="brand-mark"><Leaf size={21} /></span><span>Kato Meal Planner</span>
         </a>
         <div className="sidebar-label">MENU</div>
         <nav className="main-nav" aria-label="Hoofdnavigatie">
@@ -248,7 +248,7 @@ function App() {
 
       <main className="main-area">
         <header className="topbar">
-          <div className="mobile-brand"><span className="brand-mark"><Leaf size={19} /></span>dagroen<span className="brand-dot">.</span></div>
+          <div className="mobile-brand"><span className="brand-mark"><Leaf size={19} /></span>Kato Meal Planner</div>
           <div className="top-date"><span className="date-dot" /> {dateLabel}</div>
           <button className="profile-button" onClick={() => setPage('settings')} aria-label="Open instellingen">
             <span className="avatar">S</span><span className="profile-label">Mijn profiel</span><ChevronDown size={15} />

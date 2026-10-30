@@ -1,4 +1,4 @@
-# Dagroen — slimme maaltijdplanner
+# Kato Meal Planner
 
 Een volledig statische, Nederlandstalige maaltijdplanner voor GitHub Pages. De applicatie gebruikt React, TypeScript en Vite; menu's, favorieten, instellingen en boodschappenlijst blijven lokaal op het apparaat van de gebruiker.
 
