@@ -1,4 +1,4 @@
-const CACHE = 'kato-meal-planner-v2';
+const CACHE = 'kato-meal-planner-v3';
 const APP_SHELL = ['./', './manifest.webmanifest', './icon.svg'];
 
 self.addEventListener('install', (event) => {
@@ -18,6 +18,21 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
   const url = new URL(event.request.url);
+  if (event.request.mode === 'navigate' || url.pathname.endsWith('/manifest.webmanifest')) {
+    event.respondWith(
+      fetch(event.request).then((response) => {
+        if (response.ok) {
+          caches.open(CACHE).then((cache) => cache.put(event.request, response.clone()));
+        }
+        return response;
+      }).catch(async (error) => {
+        const cached = await caches.match(event.request);
+        if (cached) return cached;
+        throw error;
+      }),
+    );
+    return;
+  }
   if (url.origin !== self.location.origin) {
     if (event.request.destination !== 'image' || url.hostname !== 'images.unsplash.com') return;
     event.respondWith(
